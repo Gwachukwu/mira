@@ -5,26 +5,26 @@
         <img src="./assets/cloudbank Logo.svg" alt="Logo" />
       </div>
       <div class="left-header">
-        <i class="far fa-bell"></i>
+        <i class="bell-icon"></i>
         <img src="./assets/Profile-pic.png" alt="profile picture" />
         <p class="name">Ezekwesili Obinna</p>
       </div>
     </header>
     <div class="main">
       <div id="nav">
-        <router-link to="/"><i class="home-icon"></i>Home</router-link>
-        <router-link to="/"><i class="money-icon"></i>Send Money</router-link>
-        <router-link to="/about"
-          ><i class="money-icon"></i>Investment</router-link
-        >
         <router-link to="/"
-          ><i class="Transaction-icon"></i>Transactions
-          <i class="far fa-angle-down"></i
-        ></router-link>
-        <router-link to="/"><i class="fal fa-cog"></i>Settings</router-link>
-        <router-link to="/"
-          ><i class="fal fa-power-off"></i>Log out</router-link
+          ><i class="home-icon"></i><span>Home</span></router-link
         >
+        <p><i class="money-icon"></i><span>Send Money</span></p>
+        <router-link to="/investment"
+          ><i class="money-icon"></i><span>Investment</span></router-link
+        >
+        <p>
+          <i class="Transaction-icon"></i><span>Transaction</span>
+          <i class="far fa-angle-down"></i>
+        </p>
+        <p><i class="settings-icon"></i><span>Settings</span></p>
+        <p><i class="logout-icon"></i><span class="logout">Log out</span></p>
       </div>
       <router-view />
     </div>
@@ -54,17 +54,17 @@ body {
   align-items: center;
 }
 
-.fa-bell {
+.bell-icon {
+  content: url("./assets/bell.svg");
   margin-right: 2rem;
-  color: #828282;
 }
 
 .name {
   margin-left: 1rem;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
-  line-height: 21px;
+  font-size: 1.25rem;
+  line-height: 1.313rem;
   color: #333333;
 }
 
@@ -86,15 +86,27 @@ body {
   width: 11.25rem;
   display: flex;
   flex-direction: column;
+  margin-top: 1.2rem;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+#nav a,
+#nav p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+  text-decoration: none;
+  display: flex;
+  padding: 0.5rem 1rem;
+  align-items: center;
+  gap: 0.7rem;
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  background: #ffffff;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
 }
 .home-icon {
   content: url("./assets/Home Icon.svg");
@@ -106,5 +118,17 @@ body {
 
 .money-icon {
   content: url("./assets/Money.svg");
+}
+
+.settings-icon {
+  content: url("./assets/settings.svg");
+}
+
+.logout-icon {
+  content: url("./assets/Log out.svg");
+}
+
+.logout{
+  color:#DB261B;
 }
 </style>
