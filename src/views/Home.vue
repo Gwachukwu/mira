@@ -3,17 +3,23 @@
   <h1>Obinna,</h1>
     <p class="greeting">Good morning, it’s a good day to save 🤑</p>
     <Dashboard/>
+    <Announcement/>
+    <Transaction/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import Dashboard from "@/components/Dashboard.vue";
+import Announcement from "@/components/Announcement.vue";
+import Transaction from "@/components/Transaction.vue";
 
 export default {
   name: 'Home',
   components: {
    Dashboard,
+   Announcement,
+   Transaction,
   }
 }
 </script>
