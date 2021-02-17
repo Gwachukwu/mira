@@ -48,7 +48,7 @@
         </p>
         <p class="up-down"><span> &#9650;</span><span>&#9660;</span></p>
       </div>
-      <div class="big-circle"></div>
+      <DonutChart/>
       <div>
         <p>Total Money Received</p>
         <p>&#8358;2,000.00</p>
@@ -60,8 +60,13 @@
 </template>
 
 <script>
+import DonutChart from "@/components/DonutChart.vue";
+
 export default {
   name: "Transaction",
+  components:{
+    DonutChart
+  }
 };
 </script>
 
