@@ -50,17 +50,17 @@
       </div>
       <DonutChart/>
       <div>
-        <p>Total Money Received</p>
-        <p>&#8358;2,000.00</p>
-        <p>Total Money Spent</p>
-        <p>&#8358;900.00</p>
+        <p class="breakdown-headings">Total Money Received</p>
+        <p class="green-text">&#8358;2,000.00</p>
+        <p class="breakdown-headings">Total Money Spent</p>
+        <p class="red-text">&#8358;900.00</p> 
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import DonutChart from "@/components/DonutChart.vue";
+import DonutChart from "@/components/home/DonutChart.vue";
 
 export default {
   name: "Transaction",
@@ -161,5 +161,13 @@ color: #313E3E;
   flex-direction: column;
   gap: 0.25rem;
   margin-left: 0.5rem;
+}
+.green-text{
+  color: #219653;
+}
+.breakdown-headings{
+  font-size: 14px;
+line-height: 16px;
+color: #000000;
 }
 </style>

@@ -5,14 +5,16 @@
     <Dashboard/>
     <Announcement/>
     <Transaction/>
+    <Total/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Dashboard from "@/components/Dashboard.vue";
-import Announcement from "@/components/Announcement.vue";
-import Transaction from "@/components/Transaction.vue";
+import Dashboard from "@/components/home/Dashboard.vue";
+import Announcement from "@/components/home/Announcement.vue";
+import Transaction from "@/components/home/Transaction.vue";
+import Total from "@/components/home/Total.vue";
 
 export default {
   name: 'Home',
@@ -20,6 +22,7 @@ export default {
    Dashboard,
    Announcement,
    Transaction,
+   Total,
   }
 }
 </script>
